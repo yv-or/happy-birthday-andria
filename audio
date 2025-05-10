@@ -3,23 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday</title>
+  <title>Happy Birthday Music</title>
 </head>
 <body>
 
-  <!-- Your existing content goes here -->
-  <h1>Happy Birthday!</h1>
+<h1>Happy Birthday Music</h1>
 
-  <!-- Audio element to play the music on loop -->
-  <audio autoplay loop>
-    <source src="https://raw.githubusercontent.com/yv-or/happy-birthday-andria/main/happy%20birthday.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-
-  <!-- Add your existing content here -->
-  <div id="content">
-    <!-- Other HTML elements or code you have -->
-  </div>
+<!-- Audio player -->
+<audio id="happy-birthday-audio" controls loop>
+  <source src="https://raw.githubusercontent.com/yv-or/happy-birthday-andria/main/happy%20birthday.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
 
 </body>
 </html>
