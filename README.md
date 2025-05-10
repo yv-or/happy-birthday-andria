@@ -78,7 +78,7 @@
   <button onclick="makeAWish()">Blow the Candle & Make a Wish</button>
   <button onclick="toggleMusic()">Toggle Music</button>
 
-  <!-- Music Player with Your MP3 Link -->
+  <!-- Updated Google Drive URL for the music -->
   <audio id="backgroundMusic" autoplay loop>
     <source src="https://drive.google.com/uc?id=1ffV_pSQ-u2fjkfq2RZmKAbOGSsoKJha8&export=download" type="audio/mpeg">
     Your browser does not support the audio element.
