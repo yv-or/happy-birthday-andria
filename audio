@@ -12,7 +12,7 @@
 
   <!-- Audio element to play the music on loop -->
   <audio autoplay loop>
-    <source src="happy_birthday.mp3" type="audio/mpeg">
+    <source src="https://raw.githubusercontent.com/yv-or/happy-birthday-andria/main/happy%20birthday.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
