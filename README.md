@@ -76,11 +76,10 @@
     <div id="flame"></div>
   </div>
   <button onclick="makeAWish()">Blow the Candle & Make a Wish</button>
-  <button onclick="toggleMusic()">Toggle Music</button>
 
-  <!-- Updated Google Drive URL for the music -->
+  <!-- Background music (autoplay and loop) -->
   <audio id="backgroundMusic" autoplay loop>
-    <source src="https://drive.google.com/uc?id=1ffV_pSQ-u2fjkfq2RZmKAbOGSsoKJha8&export=download" type="audio/mpeg">
+    <source src="/mnt/data/c7833ef3-1ce2-4313-8ede-424d756da634.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
@@ -89,17 +88,7 @@
       document.getElementById('flame').style.display = 'none';
       document.getElementById('candle').style.transform = 'scale(0)';
       alert("🎂 Make a wish, Andria!");
-      createSparkles(); // Generate sparkles when the candle is blown
-    }
-
-    // Toggle background music play/pause
-    function toggleMusic() {
-      const music = document.getElementById('backgroundMusic');
-      if (music.paused) {
-        music.play();
-      } else {
-        music.pause();
-      }
+      createSparkles();
     }
 
     // Sparkle animation
