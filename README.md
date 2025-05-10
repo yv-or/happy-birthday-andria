@@ -1,4 +1,3 @@
-# happy-birthday-andria
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,6 +30,7 @@
       cursor: pointer;
       z-index: 10;
       position: relative;
+      transition: background-color 0.3s ease;
     }
     button:hover {
       background-color: #ffe4e1;
@@ -43,6 +43,7 @@
       position: relative;
       border-radius: 10px;
       z-index: 10;
+      transition: transform 0.5s ease;
     }
     #flame {
       width: 20px;
@@ -75,8 +76,9 @@
     <div id="flame"></div>
   </div>
   <button onclick="makeAWish()">Blow the Candle & Make a Wish</button>
+  <button onclick="toggleMusic()">Toggle Music</button>
 
-  <audio autoplay loop>
+  <audio id="backgroundMusic" autoplay loop>
     <source src="happy_birthday.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
@@ -84,7 +86,19 @@
   <script>
     function makeAWish() {
       document.getElementById('flame').style.display = 'none';
+      document.getElementById('candle').style.transform = 'scale(0)';
       alert("🎂 Make a wish, Andria!");
+      createSparkles(); // Generate sparkles when the candle is blown
+    }
+
+    // Toggle background music play/pause
+    function toggleMusic() {
+      const music = document.getElementById('backgroundMusic');
+      if (music.paused) {
+        music.play();
+      } else {
+        music.pause();
+      }
     }
 
     // Sparkle animation
@@ -93,7 +107,7 @@
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const sparkles = [];
+    let sparkles = [];
     for (let i = 0; i < 100; i++) {
       sparkles.push({
         x: Math.random() * canvas.width,
@@ -123,6 +137,20 @@
       }
       requestAnimationFrame(drawSparkles);
     }
+
+    function createSparkles() {
+      for (let i = 0; i < 300; i++) {
+        sparkles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          r: Math.random() * 2 + 1,
+          dx: (Math.random() - 0.5) * 2,
+          dy: (Math.random() - 0.5) * 2,
+          alpha: Math.random()
+        });
+      }
+    }
+
     drawSparkles();
   </script>
 </body>
