@@ -78,8 +78,9 @@
   <button onclick="makeAWish()">Blow the Candle & Make a Wish</button>
   <button onclick="toggleMusic()">Toggle Music</button>
 
+  <!-- Music Player with Your MP3 Link -->
   <audio id="backgroundMusic" autoplay loop>
-    <source src="happy_birthday.mp3" type="audio/mpeg">
+    <source src="https://drive.google.com/uc?id=1ffV_pSQ-u2fjkfq2RZmKAbOGSsoKJha8&export=download" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
